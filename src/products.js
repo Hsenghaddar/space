@@ -1,5 +1,5 @@
 import {estimateProduct} from './pricing.js';
-export const categories=['All pieces','Sets','Hoodies','Sweaters','Jeans','Wool sweaters','Outerwear','Trousers'];
+export const categories=['All pieces','Sets','Hoodies','Sweaters','Jeans','Wool sweaters','Outerwear','Trousers','Tops','Dresses','Babywear'];
 export const initialProducts=[
  {id:'set-1',name:'The everyday overshirt set',category:'Sets',color:'Stone',image:'/products/set-1.jpg'},
  {id:'set-2',name:'The relaxed hooded set',category:'Sets',color:'Mocha',image:'/products/set-2.jpg'},

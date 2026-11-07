@@ -1,0 +1,9 @@
+.git/
+.reference/
+node_modules/
+dist/
+raw-frames/
+review/
+source-assets/
+source-posts/
+*.log

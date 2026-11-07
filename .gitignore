@@ -2,3 +2,8 @@ node_modules/
 dist/
 *.log
 .reference/
+.vercel/
+raw-frames/
+review/
+source-assets/
+source-posts/

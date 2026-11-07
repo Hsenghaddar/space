@@ -4,4 +4,6 @@ import App from './App.jsx';
 import './styles.css';
 import './commerce.css';
 import './hero.css';
+import './kids.css';
+import './variants.css';
 createRoot(document.getElementById('root')).render(<React.StrictMode><App/></React.StrictMode>);
