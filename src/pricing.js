@@ -1,3 +1,7 @@
+export const deliveryFee = 4;
+const usdFormatter = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'});
+export const formatUsd = value => usdFormatter.format(value);
+
 export const estimateByCategory={Sets:35,Hoodies:20,Sweaters:20,Jeans:20,'Wool sweaters':25,Outerwear:30,Trousers:15};
 export function estimateProduct(product){
  if(product.price!=null)return product;

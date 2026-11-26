@@ -3,7 +3,7 @@ import {Plus,Heart} from './Icons.jsx';
 import {departmentOf} from './departments.js';
 import {selectVariant} from './variants.js';
 import ColorSwatches from './ColorSwatches.jsx';
-export const money=p=>p.price==null?'Ask about this piece':new Intl.NumberFormat('en-US',{style:'currency',currency:p.currency||'USD'}).format(p.price);
+export const money=p=>p.price==null?'Ask about the item':new Intl.NumberFormat('en-US',{style:'currency',currency:p.currency||'USD'}).format(p.price);
 export default function ProductCard({p,onView,onToggleFavorite,favorites,preferredColor}){
  const preferred=p.variants.find(v=>v.color===preferredColor)?.id||p.selectedVariantId||p.variants[0].id;
  const [variantId,setVariantId]=useState(preferred);

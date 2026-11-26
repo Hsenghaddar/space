@@ -10,11 +10,11 @@ A phone-first React + Vite storefront for Space Men and Space Kids, with Home, S
 
 ## Deploy on Vercel
 
-Import `Hsenghaddar/space` from GitHub in Vercel. Use framework preset **Vite**, root directory **./**, build command **npm run build**, and output directory **dist**. Leave the install command at its default. No environment variables are required for the current storefront.
+Import `Hsenghaddar/space` from GitHub in Vercel. Use framework preset **Vite**, root directory **./**, build command **npm run build**, and output directory **dist**. Leave the install command at its default.
 
 `vercel.json` records the build settings. Pages use hash routes (`/#/shop`), so no SPA rewrite is required. Product photos and catalog JSON are served from `public/` and included in the build. `.vercelignore` excludes raw sources and review artifacts from CLI uploads.
 
-Whish remains a design-only checkout option until payment details and processing are connected. GitHub pushes to the linked production branch trigger new Vercel deployments.
+Checkout runs entirely in the browser for the storefront simulation. GitHub pushes to the linked production branch trigger new Vercel deployments.
 
 ## Catalog and pricing
 
@@ -32,12 +32,12 @@ Run `node scripts/check-variants.mjs` to verify grouping, retained photos, varia
 - Shop opens to Men; Men, Kids, and All pieces have shareable hash routes. Category and color choices follow the selected collection. Header search covers both collections.
 - Home keeps the original hero, adds a Men/Kids entry section, retains the men's category edit, and features two men's and two kids' pieces.
 - Favorites and bag quantities persist in browser localStorage.
-- Color swatches under cards and in product details change the selected photograph and price. Favorites belong to the grouped product. S/M/L are selectable in product details; a size is required before adding to the bag. These are the user's requested prototype size choices, not verified inventory. Source age ranges remain in the original kids catalog data.
+- Color swatches under cards and in product details change the selected photograph and price. Favorites belong to the grouped product. Shoppers select S, M, or L before adding an item to the bag. The shop confirms size availability when processing the order. Original age ranges are recorded in the Kids catalog data.
 - Each color/size combination has a separate bag key. Bag, checkout, and the WhatsApp inquiry preserve the selected color and size.
 - Product details use Add to bag; the bag leads to Checkout.
-- Checkout includes delivery fields, an order summary, Whish Money and cash options. Its final button prepares an order in WhatsApp.
-- Kids product inquiries and kids-only orders use +961 78 999 072, the public number on `spacekids.leb`. Men's and mixed orders use the existing Space Men number. Order lines identify each collection.
-- Whish is design-only as requested. Add recipient details or a payment link in `src/storeConfig.js` later. No wallet charge or payment verification is implemented.
+- A flat $4 delivery fee applies per order. Shoppers review their delivery details, payment selection, and total before confirming. The simulated confirmation displays an order reference and clears the bag.
+- Kids product inquiries use +961 78 999 072, the public number on `spacekids.leb`.
+- Cash on delivery and Whish Money are available as simulated payment selections.
 
 No mobile bottom navigation is included. Navigation, favorites, search, and bag controls are in the compact sticky header.
 
